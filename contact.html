@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CosCorrect</title>
+    <link type="image/x-icon" rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Alpine JS for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header sticky top-0 z-10 bg-[#F7F7F8]">
+        <div class="flex justify-between max-w-7xl mx-auto items-center py-3 px-6 header custom-container">
+            <!-- Branding -->
+            <a href="index.html">
+                <div class="flex items-center branding">
+                    <img src="images/logo.png" alt="Logo" class="w-12 h-12 rounded-full logo">
+                    <h2 class="font-bold text-xl text-[#213c6b]">CosCorrect</h2>
+                </div>
+            </a>
+            <!-- Navigation -->
+            <div class="nav-wrap">
+                <nav class="nav custom-nav">
+                    <ul class="nav-items-wrap">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us.html" class="nav-link">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#courses" class="nav-link">
+                                Courses
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#pricing" class="nav-link">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Header CTAs -->
+            <div class="header-cta">
+                <span>
+                    <a href="#get-started" class="cta-button primary">
+                        Get started
+                    </a>
+                </span>
+            </div>
+            <div class="menu-toggler">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </div>
+    </header>
+    <main class="p-6 max-w-7xl mx-auto" id="main">
+        <!-- Contact Section -->
+        <div class="contact-section pt-8" id="contact">
+            <div class="flex justify-between mb-4">
+                <span class="flex-1">
+                     <h1 class="text-3xl md:text-5xl mb-4 font-bold text-[#213c6b]">Contact Us</h1>
+                     <p class="text-gray-600">We'd love to hear from you! Reach out with any questions or feedback.</p>
+                </span>
+                <span>
+                    <button class="text-[#fc9b2a] text-sm bg-[#FCFCFD] p-3 px-6 rounded-lg border border-[#F1F1F3] flex justify-center mb-4">Get in Touch</button>
+                </span>
+            </div>
+            <div class="contact-grid grid grid-cols-1 bg-white p-6 md:p-12 rounded-lg md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
+               <div class="contact-form col-span-2">
+                    <form>
+                        <div class="flex gap-4 md:flex-row flex-col md:flex">
+                            <div class="flex-1">
+                                <label for="first-name" class="block mb-2 font-semibold text-gray-700">First Name</label>
+                                <input type="text" id="first-name" name="first-name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your Name">
+                            </div>
+                            <div class="flex-1">
+                                <label for="last-name" class="block mb-2 font-semibold text-gray-700">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your Surname">
+                            </div>
+                        </div>
+                        <div class="flex gap-4 md:flex-row flex-col md:flex">
+                            <div class="flex-1">
+                                <label for="email" class="block mb-2 font-semibold text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your Email">
+                            </div>
+                            <div class="flex-1">
+                                <label for="phone" class="block mb-2 font-semibold text-gray-700">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your Phone Number">
+                            </div>
+                        </div>
+                        <label for="subject" class="block mb-2 font-semibold text-gray-700">Subject</label>
+                        <input type="text" id="subject" name="subject" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Subject">
+                        <label for="message" class="block mb-2 font-semibold text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 mb-4 border border-gray-300 rounded-lg" placeholder="Your Message"></textarea>
+                        <button type="submit" class="cta-button primary">Send Message</button>
+                    </form>
+               </div>
+               <div class="w-full contact-quick-links col-span-2 md:col-span-2 lg:col-span-1 flex flex-col md:grid md:grid-cols-2 lg:grid-cols-1 gap-6 justify-center items-center">
+                    <div class="w-full bg-[#FCFCFD] border border-[#F1F1F3] p-6 rounded-lg text-center">
+                        <a href="mailto:coscorrect@gmail.com">
+                            <i class="fa fa-envelope text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] border border-[#F1F1F3] hover:bg-[#F1F1F3] p-3 px-4 border border-[#F1F1F3] rounded-lg"></i>
+                            <p>coscorrect@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="w-full bg-[#FCFCFD] border border-[#F1F1F3] p-6 rounded-lg text-center">
+                        <a href="tel:+233501803047">
+                            <i class="fa fa-phone text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] border border-[#F1F1F3] hover:bg-[#F1F1F3] p-3 px-4 border border-[#F1F1F3] rounded-lg"></i>
+                            <p>+233501803047</p>
+                        </a>
+                    </div>
+                    <div class="w-full bg-[#FCFCFD] border border-[#F1F1F3] p-6 rounded-lg text-center">
+                        <a href="https://wa.me/+233501803047" target="_blank">
+                            <i class="fab fa-whatsapp text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] border border-[#F1F1F3] hover:bg-[#F1F1F3] p-3 px-4 border border-[#F1F1F3] rounded-lg"></i>
+                            <p>+233501803047</p>
+                        </a>
+                    </div>
+                    <div class="w-full bg-[#FCFCFD] border border-[#F1F1F3] p-6 rounded-lg text-center">
+                        <span class="flex gap-4 text-center justify-center mb-2">
+                            <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-linkedin-in"></i></a>
+                        </span>
+                        <p>Socials</p>
+                    </div>
+               </div>
+           
+            </div>
+        </div>
+
+        <div class="map-section mt-12 mb-24">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15850.49998255641!2d-1.4761409128417968!3d6.693283200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbebdc2e47b749%3A0x13a45ce0585c33e1!2sKumasi%20Technical%20University!5e0!3m2!1sen!2sgh!4v1761142980014!5m2!1sen!2sgh" 
+              class="rounded-lg"  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </main>
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+     <!-- Footer -->
+    <footer class="footer bg-white py-12">
+        <div class="footer-content md:flex justify-between items-start max-w-7xl mx-auto px-6">
+            <div class="footer-contact mb-6 md:mb-0">
+                <img src="images/logo.png" alt="CosCorrect Logo" class="inline-block w-12 h-12 mb-4">
+                <ul>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-envelope w-6"></i> coscorrect@gmail.com</a></li>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-phone w-6"></i> +233501803047</a></li>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-map-marker w-6"></i> KsTU - Kumasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-links flex gap-12">
+                <ul class="mb-6 md:mb-0">
+                    <h4 class="font-semibold text-gray-800">Home</h4>
+                    <li><a href="#courses" class="text-gray-600 hover:text-[#213c6b]">Courses</a></li>
+                    <li><a href="#pricing" class="text-gray-600 hover:text-[#213c6b]">Pricing</a></li>
+                    <li><a href="#faqs" class="text-gray-600 hover:text-[#213c6b]">FAQs</a></li>
+                </ul>
+                <ul>
+                    <h4 class="font-semibold text-gray-800">About Us</h4>
+                    <li><a href="#about-us" class="text-gray-600 hover:text-[#213c6b]">Company</a></li>
+                    <li><a href="#mission" class="text-gray-600 hover:text-[#213c6b]">Mission</a></li>
+                    <li><a href="#vision" class="text-gray-600 hover:text-[#213c6b]">Vision</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4 class="mb-4 font-semibold text-gray-800">Follow Us</h4>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr class="my-6 max-w-7xl mx-auto border-gray-200">
+        <p class="text-center text-gray-600">
+            &copy; 2025 CosCorrect. All rights reserved.
+        </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animation.js"></script>    
+</body>
+</html>

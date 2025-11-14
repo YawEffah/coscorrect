@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | CosCorrect</title>
+    <link type="image/x-icon" rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Alpine JS for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header sticky top-0 z-10 bg-[#F7F7F8]">
+        <div class="flex justify-between max-w-7xl mx-auto items-center py-3 px-6 header custom-container">
+            <!-- Branding -->
+            <a href="index.html">
+                <div class="flex items-center branding">
+                    <img src="images/logo.png" alt="Logo" class="w-12 h-12 rounded-full logo">
+                    <h2 class="font-bold text-xl text-[#213c6b]">CosCorrect</h2>
+                </div>
+            </a>
+            <!-- Navigation -->
+            <div class="nav-wrap">
+                <nav class="nav custom-nav">
+                    <ul class="nav-items-wrap">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us.html" class="nav-link">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#courses" class="nav-link">
+                                Courses
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#pricing" class="nav-link">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Header CTAs -->
+            <div class="header-cta">
+                <span>
+                    <a href="#get-started" class="cta-button primary">
+                        Get started
+                    </a>
+                </span>
+            </div>
+            <div class="menu-toggler">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="videos/hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Unlock Your ICT Potential</h1>
+            <h2 class="text-3xl md:text-4xl mt-2 animate-pulse">with our Personalized Tutoring Service.</h2>
+            <p class="mt-2">
+                Our expert tutors provide flexible, one-on-one lessons that build
+                confidence, and prepare students for the digital future.
+            </p>
+            <div class="cta-container">
+                <a href="#courses" class="cta-button primary">
+                    <i class="fas fa-rocket"></i> Explore Courses
+                </a>
+                <a href="#pricing" class="cta-button secondary">
+                    <i class="fas fa-dollar-sign"></i> View Pricing
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <main class="p-6 max-w-7xl mx-auto" id="main">
+        <!-- Offers section -->
+        <div class="offers-section pt-24" id="get-started">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center text-[#213c6b]">What We Offer<span class="text-[#fc9b2a]">...</span></h1>
+            <div class="border-b-4 border-[#fc9b2a] border-width-8 mr-auto ml-auto mt-4 mb-4 w-20"></div>
+            <p class="text-gray-600 text-center">At CosCorrect, we provide a range of features to enhance your learning experience:</p>
+            <div class="offers-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">01</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">Flexible Learning Schedule</h2>
+                        <p class="text-gray-600">Fit your coursework around your existing commitments and obligations.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+                <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">02</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">Expert Instruction</h2>
+                        <p class="text-gray-600">Learn hands-on experience from industry experts who have real-world experience.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+                <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">03</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">Diverse Course Offerings</h2>
+                        <p class="text-gray-600">Explore a wide range of technology courses covering various domains.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+                <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">04</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">Personalized Learning Paths</h2>
+                        <p class="text-gray-600">Receive tailored course recommendations based on your goals and interests.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+                 <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">05</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">IT Support</h2>
+                        <p class="text-gray-600">Get expert assistance for your IT needs and challenges.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+                <div class="offer-item bg-white p-12 rounded-lg hover:shadow-lg transition-shadow">
+                    <div class="offer-header flex justify-end items-center mb-2">
+                        <h2 class="text-4xl font-bold text-[#213c6b]">06</h2>
+                    </div>
+                    <div class="offer-content">
+                        <h2 class="text-xl font-semibold mb-2">IT Support</h2>
+                        <p class="text-gray-600">Get expert assistance for your IT needs and challenges.</p>
+                    </div>
+                    <div class="offer-footer flex justify-end mt-4">
+                        <i class="fa-solid fa-arrow-right text-[#fc9b2a] bg-[#FCFCFD] p-2 rounded border border-[#F1F1F3]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses section -->
+        <div class="courses-section pt-24" id="courses">
+            <div class="flex justify-between mb-4">
+                <span class="flex-1">
+                     <h1 class="text-3xl md:text-5xl mb-4 font-bold text-[#213c6b]">Courses</h1>
+                     <div class="border-b-4 border-[#fc9b2a] border-width-8 mt-4 mb-4 w-20"></div>
+                     <p class="text-gray-600">Level up your skills with our most popular career-boosting courses..</p>
+                </span>
+                <span>
+                    <a href="#" class="text-[#fc9b2a] text-sm bg-[#FCFCFD] hover:text-white cta-btn flex justify-center mb-4">View All</a>
+                </span>
+            </div>
+            <div class="courses-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-8">
+                <div class="course-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="images/ai.jpg" alt="Course 1" class="w-full h-80 object-cover rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <span class="flex gap-4 my-4">
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                2 weeks
+                            </button>
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                Beginner
+                            </button>
+                        </span>
+                        <p class="text-lg font-bold text-[#fc9b2a]">₵499.00</p>
+                    </div>
+                    <div class="">
+                        <h2 class="text-xl font-semibold mb-2 text-[#213c6b]">Artificial Intelligence (AI) for Productivity</h2>
+                        <p class="text-gray-600 mb-4">Learn how you can integrate AI into your daily routine to improve productivity, through simple and hands-on examples.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#F7F7F8] hover:text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="images/coding.jpg" alt="Course 1" class="w-full h-80 object-cover rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <span class="flex gap-4 my-4">
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                2 weeks
+                            </button>
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                Beginner
+                            </button>
+                        </span>
+                        <p class="text-lg font-bold text-[#fc9b2a]">₵499.00</p>
+                    </div>
+                    <div class="">
+                        <h2 class="text-xl font-semibold mb-2 text-[#213c6b]">Programming (Coding)</h2>
+                        <p class="text-gray-600 mb-4">Nurture creativity and problem-solving with coding. Students will learn the basics of programming and create simple projects that spark innovation.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#F7F7F8] hover:text-white px-4 py-2 text-sm" target="_blank">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="images/ui-ux.jpg" alt="Course 1" class="w-full h-80 object-cover rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <span class="flex gap-4 my-4">
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                2 weeks
+                            </button>
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                Beginner
+                            </button>
+                        </span>
+                        <p class="text-lg font-bold text-[#fc9b2a]">₵499.00</p>
+                    </div>
+                    <div class="">
+                        <h2 class="text-xl font-semibold mb-2 text-[#213c6b]">UI/UX Design</h2>
+                        <p class="text-gray-600 mb-4">Master the principles of user interface and user experience design. This course covers design thinking, prototyping, and user testing.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#F7F7F8] hover:text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-item bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                    <img src="images/digital-lit.jpg" alt="Course 1" class="w-full h-80 object-cover rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <span class="flex gap-4 my-4">
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                2 weeks
+                            </button>
+                            <button class="text-sm text-[#213c6b] border border-[#F1F1F3] px-4 py-2 rounded">
+                                Beginner
+                            </button>
+                        </span>
+                        <p class="text-lg font-bold text-[#fc9b2a]">₵499.00</p>
+                    </div>
+                    <div class="">
+                        <h2 class="text-xl font-semibold mb-2 text-[#213c6b]">Digital Literacy</h2>
+                        <p class="text-gray-600 mb-4">Develop essential tech skills. From computer use to internet navigation and productivity tools, you will gain confidence in the digital world.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#F7F7F8] hover:text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials Section -->
+        <div class="testimonials-section pt-24" id="testimonials">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 text-center text-[#213c6b]">What Our Students Say<span class="text-[#fc9b2a]">...</span></h1>
+            <div class="border-b-4 border-[#fc9b2a] border-width-8 mr-auto ml-auto mt-4 mb-4 w-20"></div>
+            <p class="text-gray-600 text-center">Hear from our students about their learning experiences with CosCorrect.</p>
+            
+            <!-- Carousel Container -->
+            <div class="relative mt-8">
+                <!-- Carousel with Snap Scroll -->
+                <div class="testimonials-carousel overflow-x-auto snap-x snap-mandatory scrollbar-hide flex gap-6 pb-8 px-4 md:px-0"
+                    id="testimonialsCarousel">
+                    <!-- Slide 1: Two testimonials for desktop -->
+                    <div class="testimonial-slide flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] snap-center">
+                        <div class="testimonial-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-full">
+                            <p class="text-gray-600 mb-4 p-6 py-4">"CosCorrect transformed my understanding of technology. The tutors are patient and knowledgeable, making learning enjoyable."</p>
+                            <div class="flex items-center bg-[#F7F7F8] p-6 py-4 rounded-b-lg">
+                                <img src="images/user-icon.png" alt="Student 1" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-bold text-[#213c6b]">Diana Appiah</h3>
+                                    <p class="text-sm text-gray-500">High School Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Second testimonial in the same slide group -->
+                    <div class="testimonial-slide flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] snap-center">
+                        <div class="testimonial-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-full">
+                            <p class="text-gray-600 mb-4 p-6 py-4">"The personalized approach helped me grasp complex concepts quickly. Highly recommended for anyone wanting to excel in tech!"</p>
+                            <div class="flex items-center bg-[#F7F7F8] p-6 py-4 rounded-b-lg">
+                                <img src="images/user-icon.png" alt="Student 2" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-bold text-[#213c6b]">Kwame Osei</h3>
+                                    <p class="text-sm text-gray-500">College Student</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: Next pair of testimonials -->
+                    <div class="testimonial-slide flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] snap-center">
+                        <div class="testimonial-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-full">
+                            <p class="text-gray-600 mb-4 p-6 py-4">"As a working professional, the flexible schedule was perfect for me. The quality of instruction exceeded my expectations."</p>
+                            <div class="flex items-center bg-[#F7F7F8] p-6 py-4 rounded-b-lg">
+                                <img src="images/user-icon.png" alt="Student 3" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-bold text-[#213c6b]">Ama Mensah</h3>
+                                    <p class="text-sm text-gray-500">Working Professional</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4: Second testimonial in the pair -->
+                    <div class="testimonial-slide flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] snap-center">
+                        <div class="testimonial-item bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-full">
+                            <p class="text-gray-600 mb-4 p-6 py-4">"The hands-on projects and real-world examples made learning engaging and practical. Best educational investment I've made!"</p>
+                            <div class="flex items-center bg-[#F7F7F8] p-6 py-4 rounded-b-lg">
+                                <img src="images/user-icon.png" alt="Student 4" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-bold text-[#213c6b]">Kofi Asante</h3>
+                                    <p class="text-sm text-gray-500">Career Changer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Indicators - Now showing 2 slides total (4 testimonials = 2 slides) -->
+            <div class="flex justify-center space-x-3 mt-6 hidden md:flex" id="carouselIndicators">
+                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="0"></button>
+                <button class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-slide="1"></button>
+            </div>
+        </div>
+        <!-- Pricing Section -->
+        <div class="pricing-section pt-24" id="pricing">
+            <div class="flex justify-between mb-4">
+                <span class="flex-1">
+                     <h1 class="text-3xl md:text-5xl mb-4 font-bold text-[#213c6b]">Pricing</h1>
+                     <div class="border-b-4 border-[#fc9b2a] border-width-8 mt-4 mb-4 w-20"></div>
+                     <p class="text-gray-600">Choose the plan that fits your goals and start learning with confidence.</p>
+                </span>
+                <span>
+                    <button class="text-[#fc9b2a] text-sm bg-[#FCFCFD] p-3 px-6 rounded-lg border border-[#F1F1F3] flex justify-center mb-4">Monthly</button>
+                </span>
+            </div>
+            <div class="pricing-grid grid grid-cols-1 bg-white p-6 md:p-12 rounded-lg md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="pricing-card bg-[#FCFCFD] rounded-lg py-8 px-4 lg:px-8 border border-[#F1F1F3] hover:shadow-lg transition-shadow text-center">
+                    <h2 class="text-2xl p-2 mb-4 bg-[#FFF9F0] rounded-lg">Basic</h2>
+                    <h3 class="text-3xl font-bold mb-4 text-[#213c6b]">₵499.00<span class="text-base font-normal text-gray-600">/2weeks</span></h3>
+                    <div class="bg-white rounded-lg border border-[#F1F1F3]">
+                        <div class="py-6">
+                            <h5 class="font-semibold">Available Features</h5>
+                            <ul class="text-gray-600 mb-6 text-left px-4 md:px-8 mt-4">
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Access to all courses</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> 2 weeks support</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Group lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-times rounded-lg p-2 border border-[#F1F1F3]"></i> Online lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-times rounded-lg p-2 border border-[#F1F1F3]"></i> One-on-One lectures</li>
+                            </ul>
+                        </div>
+                         <span class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#fc9b2a] text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="pricing-card bg-[#FCFCFD] rounded-lg p-8 px-4 lg:px-8 border border-[#F1F1F3] hover:shadow-lg transition-shadow text-center">
+                    <h2 class="text-2xl p-2 mb-4 bg-[#FFF9F0] rounded-lg">Intermediate</h2>
+                    <h3 class="text-3xl font-bold mb-4 text-[#213c6b]">₵699.00<span class="text-base font-normal text-gray-600">/2weeks</span></h3>
+                    <div class="bg-white rounded-lg border border-[#F1F1F3]">
+                        <div class="py-6">
+                            <h5 class="font-semibold">Available Features</h5>
+                            <ul class="text-gray-600 mb-6 text-left px-4 md:px-8 mt-4">
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Access to all courses</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> 2 weeks support</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Group lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Online lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-times rounded-lg p-2 border border-[#F1F1F3]"></i> One-on-One lectures</li>
+                            </ul>
+                        </div>
+                         <span class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#fc9b2a] text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="pricing-card bg-[#FCFCFD] rounded-lg p-8 px-4 lg:px-8 border border-[#F1F1F3] hover:shadow-lg transition-shadow text-center">
+                    <h2 class="text-2xl p-2 mb-4 bg-[#FFF9F0] rounded-lg">Professional</h2>
+                    <h3 class="text-3xl font-bold mb-4 text-[#213c6b]">Custom<span class="text-base font-normal text-gray-600">/custom</span></h3>
+                    <div class="bg-white rounded-lg border border-[#F1F1F3]">
+                        <div class="py-6">
+                            <h5 class="font-semibold">Available Features</h5>
+                            <ul class="text-gray-600 mb-6 text-left px-4 md:px-8 mt-4">
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Access to all courses</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> 2 weeks support</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Online lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> One-on-One lectures</li>
+                                <li class="mb-2 border border-[#F1F1F3] p-2 rounded-lg"><i class="fas fa-check rounded-lg p-2 bg-[#FFF4E5]"></i> Professional support</li>
+                            </ul>
+                        </div>
+                         <span class="flex justify-between items-center">
+                            <a href="https://forms.gle/Pn3jBqNg7Y1CvqWAA" class="w-full text-center cta-btn bg-[#fc9b2a] text-white px-4 py-3 text-sm" target="_blank">Enroll Now</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQs section -->
+         <div class="faqs-section pt-24" id="faqs">
+            <div class="faqs-content mb-12 grid grid-cols-1 bg-white p-6 md:p-12 md:grid-cols-2 rounded-lg gap-6 mt-8">
+                <div class="mb-4 col-span-1">
+                    <h1 class="text-3xl md:text-5xl mb-4 font-bold text-[#213c6b]">FAQs</h1>
+                    <div class="border-b-4 border-[#fc9b2a] border-width-8 mt-4 mb-4 w-20"></div>
+                    <p class="text-gray-600">Find answers to common questions about our courses and services.</p>
+                </div>
+                <div class="faqs-main col-span-2">
+                    <div class="space-y-4" id="single-accordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">What is CosCorrect Personalized Tech Tutoring?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>
+                                    CosCorrect is a home and online tutoring service in Ghana that provides customized learning in computer science 
+                                    and technology for children, students, and working professionals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">Who can enroll?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>Our courses are open to anyone interested in learning about technology, from school children to working professionals.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">How are lessons conducted?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>Sessions can be held at your home or online via Zoom or Google Meet, depending on your preference.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">Are lessons one-on-one or group-based?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>We offer both one-on-one and group-based lessons to suit your learning preferences.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">Do I need prior experience in IT or programming?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>No prior experience is necessary. Our courses are designed for all skill levels, from beginners to advanced learners.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+                            <button class="single-header w-full px-6 py-4 border-b border-[#F7F7F8] text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors duration-200 flex justify-between items-center">
+                                <span class="text-lg">Do you offer flexible learning options for working professionals?</span>
+                                <i class="faq-icon fas fa-plus text-gray-500 p-2 bg-[#FFF4E5] rounded-lg transition-transform duration-200"></i>
+                            </button>
+                            <div class="single-content px-6 py-4 pb-4 text-gray-600 hidden">
+                                <p>Yes. Our flexible scheduling allows professionals to learn at their convenience — evenings, weekends, or early mornings, either online or at home — making it easy to upskill alongside work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+     <!-- Footer -->
+    <footer class="footer bg-white py-12">
+        <div class="footer-content md:flex justify-between items-start max-w-7xl mx-auto px-6">
+            <div class="footer-contact mb-6 md:mb-0">
+                <img src="images/logo.png" alt="CosCorrect Logo" class="inline-block w-12 h-12 mb-4">
+                <ul>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-envelope w-6"></i> coscorrect@gmail.com</a></li>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-phone w-6"></i> +233501803047</a></li>
+                    <li class="mb-1"><a href="#" class="text-gray-600 hover:text-[#213c6b]"><i class="fa fa-map-marker w-6"></i> KsTU - Kumasi</a></li>
+                </ul>
+            </div>
+            <div class="footer-links flex gap-12">
+                <ul class="mb-6 md:mb-0">
+                    <h4 class="font-semibold text-gray-800">Home</h4>
+                    <li><a href="#courses" class="text-gray-600 hover:text-[#213c6b]">Courses</a></li>
+                    <li><a href="#pricing" class="text-gray-600 hover:text-[#213c6b]">Pricing</a></li>
+                    <li><a href="#faqs" class="text-gray-600 hover:text-[#213c6b]">FAQs</a></li>
+                </ul>
+                <ul>
+                    <h4 class="font-semibold text-gray-800">About Us</h4>
+                    <li><a href="#about-us" class="text-gray-600 hover:text-[#213c6b]">Company</a></li>
+                    <li><a href="#mission" class="text-gray-600 hover:text-[#213c6b]">Mission</a></li>
+                    <li><a href="#vision" class="text-gray-600 hover:text-[#213c6b]">Vision</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h4 class="mb-4 font-semibold text-gray-800">Follow Us</h4>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#213c6b] bg-[#F7F7F8] hover:bg-[#F1F1F3] p-2 px-4 border border-[#F1F1F3] rounded-lg mr-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr class="my-6 max-w-7xl mx-auto border-gray-200">
+        <p class="text-center text-gray-600">
+            &copy; 2025 CosCorrect. All rights reserved.
+        </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animation.js"></script>    
+<style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    /* Smooth scrolling */
+    .testimonials-carousel {
+        scroll-behavior: smooth;
+    }
+
+    /* Active indicator state */
+    .indicator.active {
+        background-color: #213c6b;
+        transform: scale(1.2);
+    }
+
+    /* Carousel slide animation */
+    .testimonial-slide {
+        transition: transform 0.3s ease;
+    }
+
+    .testimonial-slide:hover {
+        transform: translateY(-4px);
+    }
+
+    /* Mobile: Full width slides */
+    @media (max-width: 767px) {
+        .testimonial-slide {
+            width: 100%;
+        }
+    }
+
+    /* Desktop: Two testimonials side by side */
+    @media (min-width: 768px) {
+        .testimonials-carousel {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        
+        .testimonial-slide {
+            width: calc(50% - 12px); /* Account for gap */
+        }
+    }
+</style>
+
+<script>
+    // Add scroll functionality to the scroll indicator
+    document.querySelector('.scroll-indicator').addEventListener('click', function() {
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    });
+
+    // Add video fallback for mobile devices
+    window.addEventListener('load', function() {
+        const video = document.querySelector('.video-background video');
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // For mobile devices, we could replace with a static image
+            // or keep the video but ensure it's optimized
+            video.setAttribute('playsinline', '');
+            video.setAttribute('muted', '');
+        }
+    });
+</script>
+
+<script>
+class TestimonialsCarousel {
+    constructor() {
+        this.carousel = document.getElementById('testimonialsCarousel');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.slides = document.querySelectorAll('.testimonial-slide');
+        this.currentSlide = 0;
+        this.slideWidth = 0;
+        this.autoSlideInterval = null;
+        this.isMobile = window.innerWidth < 768;
+        
+        this.init();
+    }
+    
+    init() {
+        // Calculate slide width
+        this.updateSlideWidth();
+        
+        // Indicator clicks
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Snap scroll detection
+        this.carousel.addEventListener('scroll', () => this.handleScroll());
+        
+        // Responsive handling
+        window.addEventListener('resize', () => {
+            const wasMobile = this.isMobile;
+            this.isMobile = window.innerWidth < 768;
+            
+            if (wasMobile !== this.isMobile) {
+                // Device type changed, reset carousel
+                this.updateSlideWidth();
+                this.goToSlide(0);
+            } else {
+                this.updateSlideWidth();
+                this.goToSlide(this.currentSlide);
+            }
+        });
+        
+        // Start auto-slide
+        this.startAutoSlide();
+        
+        // Pause auto-slide on hover
+        this.carousel.addEventListener('mouseenter', () => this.stopAutoSlide());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoSlide());
+        
+        // Add touch/swipe support
+        this.addTouchSupport();
+    }
+    
+    addTouchSupport() {
+        let startX = 0;
+        let endX = 0;
+        
+        this.carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        this.carousel.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            this.handleSwipe(startX, endX);
+        });
+    }
+    
+    handleSwipe(startX, endX) {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe left - next slide
+                this.next();
+            } else {
+                // Swipe right - previous slide
+                this.prev();
+            }
+        }
+    }
+    
+    updateSlideWidth() {
+        if (this.isMobile) {
+            // Mobile: each slide takes full width
+            this.slideWidth = this.slides[0].offsetWidth + 24;
+        } else {
+            // Desktop: two slides make one "view", so we need to calculate based on pair
+            this.slideWidth = (this.slides[0].offsetWidth * 2) + 24;
+        }
+    }
+    
+    getTotalSlides() {
+        // On mobile, each testimonial is a slide
+        // On desktop, every two testimonials make one slide
+        return this.isMobile ? this.slides.length : Math.ceil(this.slides.length / 2);
+    }
+    
+    goToSlide(slideIndex) {
+        this.currentSlide = slideIndex;
+        
+        if (this.isMobile) {
+            // Mobile: scroll to individual testimonial
+            const scrollPosition = this.slideWidth * slideIndex;
+            this.carousel.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        } else {
+            // Desktop: scroll to pair of testimonials
+            const scrollPosition = this.slideWidth * slideIndex;
+            this.carousel.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        this.updateIndicators();
+    }
+    
+    next() {
+        const totalSlides = this.getTotalSlides();
+        this.currentSlide = (this.currentSlide + 1) % totalSlides;
+        this.goToSlide(this.currentSlide);
+    }
+    
+    prev() {
+        const totalSlides = this.getTotalSlides();
+        this.currentSlide = (this.currentSlide - 1 + totalSlides) % totalSlides;
+        this.goToSlide(this.currentSlide);
+    }
+    
+    handleScroll() {
+        const scrollPos = this.carousel.scrollLeft;
+        let newSlide;
+        
+        if (this.isMobile) {
+            newSlide = Math.round(scrollPos / this.slideWidth);
+        } else {
+            newSlide = Math.round(scrollPos / this.slideWidth);
+        }
+        
+        if (newSlide !== this.currentSlide) {
+            this.currentSlide = newSlide;
+            this.updateIndicators();
+        }
+    }
+    
+    updateIndicators() {
+        this.indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === this.currentSlide);
+        });
+    }
+    
+    startAutoSlide() {
+        this.stopAutoSlide(); // Clear existing interval
+        this.autoSlideInterval = setInterval(() => {
+            this.next();
+        }, 5000); // Change slide every 5 seconds
+    }
+    
+    stopAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+}
+
+// Initialize carousel when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new TestimonialsCarousel();
+});
+</script>
+</body>
+</html>
